@@ -106,63 +106,63 @@ $inuit-responsive-settings: false !default;
 
                 /* Below average sizes */
 
-                .#{$inuit-namespace}#{$alias}milli,
-                %#{$inuit-namespace}#{$alias}milli {
+                .#{$inuit-namespace}#{$alias}-milli,
+                %#{$inuit-namespace}#{$alias}-milli {
                     @include inuit-font-size($font-size-milli);
                 }
 
-                .#{$inuit-namespace}#{$alias}nano,
-                %#{$inuit-namespace}#{$alias}nano {
+                .#{$inuit-namespace}#{$alias}-nano,
+                %#{$inuit-namespace}#{$alias}-nano {
                     @include inuit-font-size($font-size-nano);
                 }
 
                 /* Main sizes */
 
-                .#{$inuit-namespace}#{$alias}zeta,
-                %#{$inuit-namespace}#{$alias}zeta {
+                .#{$inuit-namespace}#{$alias}-zeta,
+                %#{$inuit-namespace}#{$alias}-zeta {
                     @include inuit-font-size($font-size-zeta);
                 }
 
-               .#{$inuit-namespace}#{$alias}epsilon,
-                %#{$inuit-namespace}#{$alias}epsilon {
+               .#{$inuit-namespace}#{$alias}-epsilon,
+                %#{$inuit-namespace}#{$alias}-epsilon {
                     @include inuit-font-size($font-size-epsilon);
                 }
 
-               .#{$inuit-namespace}#{$alias}delta,
-                %#{$inuit-namespace}#{$alias}delta {
+               .#{$inuit-namespace}#{$alias}-delta,
+                %#{$inuit-namespace}#{$alias}-delta {
                     @include inuit-font-size($font-size-delta);
                 }
 
-               .#{$inuit-namespace}#{$alias}gamma,
-                %#{$inuit-namespace}#{$alias}gamma {
+               .#{$inuit-namespace}#{$alias}-gamma,
+                %#{$inuit-namespace}#{$alias}-gamma {
                     @include inuit-font-size($font-size-gamma);
                 }
 
-               .#{$inuit-namespace}#{$alias}beta,
-                %#{$inuit-namespace}#{$alias}beta {
+               .#{$inuit-namespace}#{$alias}-beta,
+                %#{$inuit-namespace}#{$alias}-beta {
                     @include inuit-font-size($font-size-beta);
                 }
 
-               .#{$inuit-namespace}#{$alias}alpha,
-                %#{$inuit-namespace}#{$alias}alpha {
+               .#{$inuit-namespace}#{$alias}-alpha,
+                %#{$inuit-namespace}#{$alias}-alpha {
                     @include inuit-font-size($font-size-alpha);
                 }
 
                 /* Gigantic type font sizes */
 
-                .#{$inuit-namespace}#{$alias}giga,
-                %#{$inuit-namespace}#{$alias}giga {
-                    @include inuit-font-size($font-size-giga);
+                .#{$inuit-namespace}#{$alias}-kilo,
+                %#{$inuit-namespace}#{$alias}-kilo {
+                    @include inuit-font-size($font-size-kilo);
                 }
 
-                .#{$inuit-namespace}#{$alias}mega,
-                %#{$inuit-namespace}#{$alias}mega {
+                .#{$inuit-namespace}#{$alias}-mega,
+                %#{$inuit-namespace}#{$alias}-mega {
                     @include inuit-font-size($font-size-mega);
                 }
 
-                .#{$inuit-namespace}#{$alias}kilo,
-                %#{$inuit-namespace}#{$alias}kilo {
-                    @include inuit-font-size($font-size-kilo);
+                .#{$inuit-namespace}#{$alias}-giga,
+                %#{$inuit-namespace}#{$alias}-giga {
+                    @include inuit-font-size($font-size-giga);
                 }
 
             } // close media query.

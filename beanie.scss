@@ -34,6 +34,7 @@
  * Widths...............Inuit widths helpers.
  * Widths-responsive....Width helpers based on defined breakpoints.
  * Spacing..............Micro-level spacing helpers.
+ * Inline...............Responsive inline alignment helpers.
  */
 
 
@@ -88,3 +89,5 @@
 @import "inuit-widths-responsive/trumps.widths-responsive";
 @import "inuit-spacing/trumps.spacing";
 @import "inuit-spacing-responsive/trumps.spacing-responsive";
+@import "trumps.inline-align";
+

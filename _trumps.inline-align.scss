@@ -1,0 +1,45 @@
+/*------------------------------------*\
+    #INLINE ALIGN
+\*------------------------------------*/
+
+$inuit-responsive-settings: false !default;
+
+
+
+
+
+/**
+ * Helpers to align inline elements (display inline and inline-block)
+ */
+
+.#{$inuit-layout-namespace}inline-center { text-align: center !important; }
+.#{$inuit-layout-namespace}inline-right  { text-align: right !important; }
+.#{$inuit-layout-namespace}inline-left   { text-align: left !important; }
+
+
+
+
+
+@if ($inuit-responsive-settings == true) {
+
+    @each $breakpoint in $breakpoints {
+
+        $alias:     nth($breakpoint, 1);
+        $condition: nth($breakpoint, 2);
+
+        // Exclude retina media query, since it would be stupid.
+        @if ($alias != "retina") {
+
+            @include media-query($alias) {
+
+                .#{$inuit-layout-namespace}#{$alias}-inline-center { text-align: center !important; }
+                .#{$inuit-layout-namespace}#{$alias}-inline-right  { text-align: right !important; }
+                .#{$inuit-layout-namespace}#{$alias}-inline-left   { text-align: left !important; }
+
+            } // close media query.
+
+        } // close retina check.
+
+    } // close breakpoints loop.
+
+} // close responsive

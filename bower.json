@@ -1,0 +1,47 @@
+{
+  "name": "beanie",
+  "description": "Front-end framework built for rapid digital agency development work.",
+  "homepage": "https://github.com/Nobox/beanie",
+  "keywords": [
+    "css",
+    "sass",
+    "scss",
+    "oocss",
+    "bem"
+  ],
+  "authors": [
+    {
+      "name": "Waldemar Figueroa Medina",
+      "email": "waldemar@nobox.com"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "inuit-box-sizing": "~0.2.0",
+    "inuit-buttons": "~0.4.1",
+    "inuit-clearfix": "~0.2.1",
+    "inuit-defaults": "~0.2.1",
+    "inuit-flag": "~0.3.2",
+    "inuit-functions": "~0.2.0",
+    "inuit-images": "~0.3.2",
+    "inuit-layout": "~0.3.2",
+    "inuit-list-inline": "~0.3.2",
+    "inuit-list-bare": "~0.3.0",
+    "inuit-lists": "~0.1.0",
+    "inuit-normalize": "~3.0.1",
+    "inuit-media": "~0.4.2",
+    "inuit-mixins": "~0.2.3",
+    "inuit-page": "~0.2.1",
+    "inuit-spacing": "~0.6.2",
+    "inuit-spacing-responsive": "~0.0.4",
+    "inuit-reset": "~0.1.1",
+    "inuit-responsive-settings": "~0.1.3",
+    "inuit-responsive-tools": "~0.1.3",
+    "inuit-widths": "~0.3.2",
+    "inuit-widths-responsive": "~0.1.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Nobox/beanie.git"
+  }
+}

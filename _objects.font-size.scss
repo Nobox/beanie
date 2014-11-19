@@ -1,0 +1,174 @@
+/*------------------------------------*\
+    #FONT SIZE
+\*------------------------------------*/
+
+$font-size-giga:    72px !default;
+$font-size-mega:    60px !default;
+$font-size-kilo:    48px !default;
+
+$font-size-alpha:   36px !default;
+$font-size-beta:    30px !default;
+$font-size-gamma:   24px !default;
+$font-size-delta:   20px !default;
+$font-size-epsilon: 18px !default;
+$font-size-zeta:    16px !default;
+
+$font-size-milli:   14px !default;
+$font-size-nano:    12px !default;
+
+// Responsive classes are not created by default.
+$inuit-responsive-settings: false !default;
+
+
+
+
+
+/* Below average sizes */
+
+.#{$inuit-namespace}milli,
+%#{$inuit-namespace}milli {
+    @include inuit-font-size($font-size-milli);
+}
+
+.#{$inuit-namespace}nano,
+%#{$inuit-namespace}nano {
+    @include inuit-font-size($font-size-nano);
+}
+
+/* Main sizes */
+
+.#{$inuit-namespace}zeta,
+%#{$inuit-namespace}zeta {
+    @include inuit-font-size($font-size-zeta);
+}
+
+.#{$inuit-namespace}epsilon,
+%#{$inuit-namespace}epsilon {
+    @include inuit-font-size($font-size-epsilon);
+}
+
+.#{$inuit-namespace}delta,
+%#{$inuit-namespace}delta {
+    @include inuit-font-size($font-size-delta);
+}
+
+.#{$inuit-namespace}gamma,
+%#{$inuit-namespace}gamma {
+    @include inuit-font-size($font-size-gamma);
+}
+
+.#{$inuit-namespace}beta,
+%#{$inuit-namespace}beta {
+    @include inuit-font-size($font-size-beta);
+}
+
+.#{$inuit-namespace}alpha,
+%#{$inuit-namespace}alpha {
+    @include inuit-font-size($font-size-alpha);
+}
+
+/* Huge font sizes */
+
+.#{$inuit-namespace}kilo,
+%#{$inuit-namespace}kilo {
+    @include inuit-font-size($font-size-kilo);
+}
+
+.#{$inuit-namespace}mega,
+%#{$inuit-namespace}mega {
+    @include inuit-font-size($font-size-mega);
+}
+
+.#{$inuit-namespace}giga,
+%#{$inuit-namespace}giga {
+    @include inuit-font-size($font-size-giga);
+}
+
+
+
+
+
+/**
+ * Font size grid for a consistent and responsive.
+ */
+
+@if ($inuit-responsive-settings == true) {
+
+    @each $breakpoint in $breakpoints {
+
+        $alias:     nth($breakpoint, 1);
+        $condition: nth($breakpoint, 2);
+
+        // Exclude retina media query, since it would be stupid.
+        @if ($alias != "retina") {
+
+            @include media-query($alias) {
+
+                /* Below average sizes */
+
+                .#{$inuit-namespace}#{$alias}milli,
+                %#{$inuit-namespace}#{$alias}milli {
+                    @include inuit-font-size($font-size-milli);
+                }
+
+                .#{$inuit-namespace}#{$alias}nano,
+                %#{$inuit-namespace}#{$alias}nano {
+                    @include inuit-font-size($font-size-nano);
+                }
+
+                /* Main sizes */
+
+                .#{$inuit-namespace}#{$alias}zeta,
+                %#{$inuit-namespace}#{$alias}zeta {
+                    @include inuit-font-size($font-size-zeta);
+                }
+
+               .#{$inuit-namespace}#{$alias}epsilon,
+                %#{$inuit-namespace}#{$alias}epsilon {
+                    @include inuit-font-size($font-size-epsilon);
+                }
+
+               .#{$inuit-namespace}#{$alias}delta,
+                %#{$inuit-namespace}#{$alias}delta {
+                    @include inuit-font-size($font-size-delta);
+                }
+
+               .#{$inuit-namespace}#{$alias}gamma,
+                %#{$inuit-namespace}#{$alias}gamma {
+                    @include inuit-font-size($font-size-gamma);
+                }
+
+               .#{$inuit-namespace}#{$alias}beta,
+                %#{$inuit-namespace}#{$alias}beta {
+                    @include inuit-font-size($font-size-beta);
+                }
+
+               .#{$inuit-namespace}#{$alias}alpha,
+                %#{$inuit-namespace}#{$alias}alpha {
+                    @include inuit-font-size($font-size-alpha);
+                }
+
+                /* Gigantic type font sizes */
+
+                .#{$inuit-namespace}#{$alias}giga,
+                %#{$inuit-namespace}#{$alias}giga {
+                    @include inuit-font-size($font-size-giga);
+                }
+
+                .#{$inuit-namespace}#{$alias}mega,
+                %#{$inuit-namespace}#{$alias}mega {
+                    @include inuit-font-size($font-size-mega);
+                }
+
+                .#{$inuit-namespace}#{$alias}kilo,
+                %#{$inuit-namespace}#{$alias}kilo {
+                    @include inuit-font-size($font-size-kilo);
+                }
+
+            } // close media query.
+
+        } // close retina check.
+
+    } // close breakpoints loop.
+
+} // close responsive

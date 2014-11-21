@@ -1,0 +1,268 @@
+/* ==========================================================================
+   RESPONSIVE LAYOUT
+   ========================================================================== */
+
+/**
+ * Custom responsive modifiers for inuitcss' layout object.
+ */
+
+// Predefine the variables below in order to alter and enable specific features.
+$inuit-enable-responsive-layout--tiny:     false !default;
+$inuit-enable-responsive-layout--small:    false !default;
+$inuit-enable-responsive-layout--large:    false !default;
+$inuit-enable-responsive-layout--huge:     false !default;
+$inuit-enable-responsive-layout--flush:    false !default;
+$inuit-enable-responsive-layout--rev:      false !default;
+$inuit-enable-responsive-layout--middle:   false !default;
+$inuit-enable-responsive-layout--bottom:   false !default;
+$inuit-enable-responsive-layout--right:    false !default;
+$inuit-enable-responsive-layout--center:   false !default;
+$inuit-enable-responsive-layout--auto:     false !default;
+
+
+
+
+
+@each $breakpoint in $breakpoints {
+
+    $alias:     nth($breakpoint, 1);
+    $condition: nth($breakpoint, 2);
+
+    // No need for modifiers for retina screens (I hope so)
+    @if ($alias != "retina") {
+
+        @include media-query($alias) {
+
+            @if ($inuit-enable-responsive-layout--tiny == true) {
+
+                /**
+                 * Layouts with tiny gutters.
+                 */
+
+                .#{$inuit-layout-namespace}#{$alias}-layout--tiny,
+                %#{$inuit-layout-namespace}#{$alias}-layout--tiny {
+                    margin-left: -($inuit-layout-gutter--tiny);
+
+                    > .#{$inuit-layout-namespace}layout__item,
+                    > %#{$inuit-layout-namespace}layout__item {
+                        padding-left: $inuit-layout-gutter--tiny;
+                    }
+
+                }
+
+            }
+
+            @if ($inuit-enable-responsive-layout--small == true) {
+
+                /**
+                 * Layouts with small gutters.
+                 */
+
+                .#{$inuit-layout-namespace}#{$alias}-layout--small,
+                %#{$inuit-layout-namespace}#{$alias}-layout--small {
+                    margin-left: -($inuit-layout-gutter--small);
+
+                    > .#{$inuit-layout-namespace}layout__item,
+                    > %#{$inuit-layout-namespace}layout__item {
+                        padding-left: $inuit-layout-gutter--small;
+                    }
+
+                }
+
+            }
+
+            @if ($inuit-enable-responsive-layout--large == true) {
+
+                /**
+                 * Layouts with large gutters.
+                 */
+
+                .#{$inuit-layout-namespace}#{$alias}-layout--large,
+                %#{$inuit-layout-namespace}#{$alias}-layout--large {
+                    margin-left: -($inuit-layout-gutter--large);
+
+                    > .#{$inuit-layout-namespace}layout__item,
+                    > %#{$inuit-layout-namespace}layout__item {
+                        padding-left: $inuit-layout-gutter--large;
+                    }
+
+                }
+
+            }
+
+            @if ($inuit-enable-responsive-layout--huge == true) {
+
+                /**
+                 * Layouts with huge gutters.
+                 */
+
+                .#{$inuit-layout-namespace}#{$alias}-layout--huge,
+                %#{$inuit-layout-namespace}#{$alias}-layout--huge {
+                    margin-left: -($inuit-layout-gutter--huge);
+
+                    > .#{$inuit-layout-namespace}layout__item,
+                    > %#{$inuit-layout-namespace}layout__item {
+                        padding-left: $inuit-layout-gutter--huge;
+                    }
+
+                }
+
+            }
+
+
+
+
+
+            @if ($inuit-enable-responsive-layout--flush == true) {
+
+                /**
+                 * Layouts with no gutters.
+                 */
+
+                .#{$inuit-layout-namespace}#{$alias}-layout--flush,
+                %#{$inuit-layout-namespace}#{$alias}-layout--flush {
+                    margin-left: 0;
+
+                    > .#{$inuit-layout-namespace}layout__item,
+                    > %#{$inuit-layout-namespace}layout__item {
+                        padding-left: 0;
+                    }
+
+                }
+
+            }
+
+
+
+
+
+            @if ($inuit-enable-responsive-layout--rev == true) {
+
+                /**
+                 * Reversed rendered order of layout items, e.g. items 1, 2, 3, 4 in your
+                 * markup will display in order 4, 3, 2, 1 on your page.
+                 */
+
+                .#{$inuit-layout-namespace}#{$alias}-layout--rev,
+                %#{$inuit-layout-namespace}#{$alias}-layout--rev {
+                    direction: rtl;
+                    text-align: left;
+
+                    > .#{$inuit-layout-namespace}layout__item,
+                    > %#{$inuit-layout-namespace}layout__item {
+                        direction: ltr;
+                        text-align: left;
+                    }
+
+                }
+
+            }
+
+
+
+
+
+            @if ($inuit-enable-responsive-layout--middle == true) {
+
+                /**
+                 * Align layout items to the vertical centers of each other.
+                 */
+
+                .#{$inuit-layout-namespace}#{$alias}-layout--middle,
+                %#{$inuit-layout-namespace}#{$alias}-layout--middle {
+
+                    > .#{$inuit-layout-namespace}layout__item,
+                    > %#{$inuit-layout-namespace}layout__item {
+                        vertical-align: middle;
+                    }
+
+                }
+
+            }
+
+            @if ($inuit-enable-responsive-layout--bottom == true) {
+
+                /**
+                 * Align layout items to the vertical bottoms of each other.
+                 */
+
+                .#{$inuit-layout-namespace}#{$alias}-layout--bottom,
+                %#{$inuit-layout-namespace}#{$alias}-layout--bottom {
+
+                    > .#{$inuit-layout-namespace}layout__item,
+                    > %#{$inuit-layout-namespace}layout__item {
+                        vertical-align: bottom;
+                    }
+
+                }
+
+            }
+
+
+
+
+
+            @if ($inuit-enable-responsive-layout--right == true) {
+
+                /**
+                 * Make the layout items fill up from the right hand side.
+                 */
+
+                .#{$inuit-layout-namespace}#{$alias}-layout--right,
+                %#{$inuit-layout-namespace}#{$alias}-layout--right {
+                    text-align: right;
+
+                    > .#{$inuit-layout-namespace}layout__item,
+                    > %#{$inuit-layout-namespace}layout__item {
+                        text-align: left;
+                    }
+
+                }
+
+            }
+
+            @if ($inuit-enable-responsive-layout--center == true) {
+
+                /**
+                 * Make the layout items fill up from the center outward.
+                 */
+
+                .#{$inuit-layout-namespace}#{$alias}-layout--center,
+                %#{$inuit-layout-namespace}#{$alias}-layout--center {
+                    text-align: center;
+
+                    > .#{$inuit-layout-namespace}layout__item,
+                    > %#{$inuit-layout-namespace}layout__item {
+                        text-align: left;
+                    }
+
+                }
+
+            }
+
+
+
+
+
+            @if ($inuit-enable-responsive-layout--auto == true) {
+
+                /**
+                 * Cause layout items to take up a non-explicit amount of width.
+                 */
+                .#{$inuit-layout-namespace}#{$alias}-layout--auto,
+                %#{$inuit-layout-namespace}#{$alias}-layout--auto {
+
+                    > .#{$inuit-layout-namespace}layout__item,
+                    > %#{$inuit-layout-namespace}layout__item {
+                        width: auto;
+                    }
+
+                }
+
+            }
+
+        } // close media query
+
+    } // close retina check
+
+} // close breakpoints loop

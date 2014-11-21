@@ -24,6 +24,7 @@
  * Font-size............Consistent font sizes.
  * Buttons..............inuitcss’ buttons object.
  * Layout...............inuitcss’ layout tool.
+ * Layout-responsive....Responsive modifiers for layout object.
  * Media................The media object.
  * Flag.................The flag object.
  * Bare list............Bare unstyled lists.
@@ -75,6 +76,7 @@
 @import "objects.font-size";
 @import "inuit-buttons/objects.buttons";
 @import "inuit-layout/objects.layout";
+@import "objects.layout-responsive";
 @import "inuit-media/objects.media";
 @import "inuit-flag/objects.flag";
 @import "inuit-list-bare/objects.list-bare";

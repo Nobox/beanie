@@ -1,0 +1,31 @@
+/*------------------------------------*\
+    #VISIBILITY
+\*------------------------------------*/
+
+.hidden {
+    display: none !important;
+}
+
+@if ($inuit-responsive-settings == true) {
+
+    @each $breakpoint in $breakpoints {
+
+        $alias:     nth($breakpoint, 1);
+        $condition: nth($breakpoint, 2);
+
+        // No need for this on retina screens
+        @if ($alias != "retina") {
+
+            @include media-query($alias) {
+
+                .hidden-#{$alias} {
+                    display: none !important;
+                }
+
+            }
+
+        }
+
+    }
+
+}

@@ -1,0 +1,9 @@
+///*------------------------------------*\
+//    #ALIASES
+//\*------------------------------------*/
+
+$spacing-unit:          $inuit-base-spacing-unit !default;
+$spacing-unit--tiny:    halve($inuit-base-spacing-unit--small) !default;
+$spacing-unit--small:   $inuit-base-spacing-unit--small !default;
+$spacing-unit--large:   $inuit-base-spacing-unit--large !default;
+$spacing-unit--huge:    double($inuit-base-spacing-unit--large) !default;

@@ -18,20 +18,20 @@
  * Shared...............High-level styling across shared rulesets.
  *
  * BASE
- * Page.................Page-level styles (HTML element).
- * Lists................inuitcss list styles.
- * Images...............inuitcss images.
+ * Page.................Base page-level styling.
+ * Lists................Simple list styles.
+ * Images...............Simple image styles.
  *
  * OBJECTS
  * Font-size............Consistent font sizes.
- * Buttons..............inuitcss’ buttons object.
- * Layout...............inuitcss’ layout tool.
- * Layout-responsive....Responsive modifiers for layout object.
- * Media................The media object.
+ * Buttons..............Simple, extensible button objects.
+ * Layout...............inuitcss’ answer to the traditional grid system.
+ * Layout-responsive....Custom responsive modifiers for layout object.
+ * Media................@stubbornella’s media object.
  * Flag.................The flag object.
  * Box..................Simple object to make boxed-off content.
  * Block................Stack an image above some text content.
- * Bare list............Bare unstyled lists.
+ * Bare list............A simple object to remove bullets and indents from lists.
  * Inline list..........Align list items side by side.
  *
  * TRUMPS
@@ -39,7 +39,8 @@
  * Widths...............Inuit widths helpers.
  * Widths-responsive....Width helpers based on defined breakpoints.
  * Spacing..............Micro-level spacing helpers.
- * Inline...............Responsive inline alignment helpers.
+ * Spacing-resposnive.. Responsive versions of spacing helpers.
+ * Inline...............Inline alignment helpers.
  * Visibility...........Visibility helpers to hide content responsively.
  */
 

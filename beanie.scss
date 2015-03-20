@@ -28,6 +28,8 @@
  * Layout-responsive....Responsive modifiers for layout object.
  * Media................The media object.
  * Flag.................The flag object.
+ * Box..................Simple object to make boxed-off content.
+ * Block................Stack an image above some text content.
  * Bare list............Bare unstyled lists.
  * Inline list..........Align list items side by side.
  *
@@ -82,6 +84,8 @@
 @import "objects.layout-responsive";
 @import "inuit-media/objects.media";
 @import "inuit-flag/objects.flag";
+@import "inuit-box/objects.box";
+@import "inuit-block/objects.block";
 @import "inuit-list-bare/objects.list-bare";
 @import "inuit-list-inline/objects.list-inline";
 

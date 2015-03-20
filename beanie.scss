@@ -9,12 +9,13 @@
  * Functions............inuitcss’ default functions.
  * Mixins...............inuitcss’ default mixins.
  * Responsive...........Responsive tooling (requires responsive settings).
- * Aliases    ..........Shorter aliases for important values.
+ * Aliases..............Shorter aliases for important values.
  *
  * GENERIC
  * Reset................A pared back reset to remove margins.
  * Normalize............A level playing field.
  * Box-sizing...........Better default `box-sizing`.
+ * Shared...............High-level styling across shared rulesets.
  *
  * BASE
  * Page.................Page-level styles (HTML element).
@@ -64,6 +65,7 @@
  */
 @import "inuit-reset/generic.reset";
 @import "inuit-normalize/generic.normalize";
+@import "inuit-shared/generic.shared";
 @import "inuit-box-sizing/generic.box-sizing";
 
 

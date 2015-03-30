@@ -8,6 +8,7 @@
  * TOOLS
  * Functions............inuitcss’ default functions.
  * Mixins...............inuitcss’ default mixins.
+ * Widths...............inuitcss’ width classes generator.
  * Responsive...........Responsive tooling (requires responsive settings).
  * Aliases..............Shorter aliases for important values.
  *
@@ -57,6 +58,7 @@
  */
 @import "inuit-functions/tools.functions";
 @import "inuit-mixins/tools.mixins";
+@import "inuit-tools-widths/tools.widths";
 @import "inuit-responsive-tools/tools.responsive";
 @import "tools.aliases";
 
